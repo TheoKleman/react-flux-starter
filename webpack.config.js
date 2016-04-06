@@ -1,7 +1,11 @@
+var ExtractTextPlugin = require("extract-text-webpack-plugin");
+
 module.exports = {
-  entry: ["./app/scripts/app.js"],
+  context: __dirname + '/app',
+  // devtool: "source-map",
+  entry: ["./scripts/app.js"],
   output: {
-    filename: "./app/dist/scripts/bundle.js"
+    filename: "../dist/bundle.js"
   },
   module: {
     loaders: [
@@ -15,12 +19,15 @@ module.exports = {
       },
       {
         test: /\.scss$/,
-        loader: "css-loader!sass-loader"
+        loader: ExtractTextPlugin.extract(["css", "sass"])
       }
     ]
   },
   resolve: {
     extensions: ['', '.js', '.es6']
   },
-  watch: true
+  watch: true,
+  plugins: [
+    new ExtractTextPlugin("./dist/styles/master.css")
+  ]
 }
