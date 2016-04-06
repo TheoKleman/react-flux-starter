@@ -4,7 +4,7 @@ module.exports = {
   context: __dirname + '/app',
   entry: ["./scripts/app.js"],
   output: {
-    filename: "dist/bundle.js"
+    filename: "dist/scripts/bundle.js"
   },
   module: {
     loaders: [
