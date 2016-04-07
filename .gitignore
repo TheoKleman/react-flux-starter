@@ -90,4 +90,4 @@ Temporary Items
 sftp-config.json
 
 
-dist/
+build/

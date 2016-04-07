@@ -12,9 +12,9 @@
 
 ## How to start ?
 1. First, run `npm install`
-2. Then `npm start`
+2. Then `npm run dev`
 3. Go to `http://localhost:8080`
 4. You're ready to go
 
 ## How to compile all the assets for production ?
-Simply run `webpack -p` and all the files you need will be compiled and moved to the `dist` folder.
+Simply run `npm run build` and all the files you need will be compiled and moved to the `build` folder.

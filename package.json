@@ -6,7 +6,8 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/webpack-dev-server --inline --content-base app"
+    "dev": "./node_modules/.bin/webpack-dev-server --inline --content-base app",
+    "build": "NODE_ENV=production ./node_modules/.bin/webpack -p"
   },
   "repository": {
     "type": "git",

@@ -1,10 +1,23 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var isProduction = process.env.NODE_ENV === 'production';
+
+// Adding 'build' to the path when we're building for production
+var folderPrefix = ''
+if (isProduction) {
+  folderPrefix = 'build/'
+}
+
+// Defining output
+const outputs = {
+  scripts: folderPrefix + 'dist/scripts/bundle.js',
+  styles: folderPrefix + 'dist/styles/master.css'
+}
 
 module.exports = {
   context: __dirname + '/app',
   entry: "./scripts/index.js",
   output: {
-    filename: "dist/scripts/bundle.js"
+    filename: outputs.scripts
   },
   module: {
     loaders: [
@@ -27,6 +40,6 @@ module.exports = {
   },
   watch: true,
   plugins: [
-    new ExtractTextPlugin("./dist/styles/master.css")
+    new ExtractTextPlugin(outputs.styles)
   ]
 }
