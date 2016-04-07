@@ -1,6 +1,3 @@
-// Importing styles
-require("./../styles/master.scss");
-
 // Importing node modules
 import React from "react";
 import ReactDOM from "react-dom";

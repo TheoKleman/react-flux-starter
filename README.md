@@ -17,3 +17,4 @@
 4. You're ready to go
 
 ## How to compile all the assets for production ?
+Simply run `webpack -p` and all the files you need will be compiled and moved to the `dist` folder.
