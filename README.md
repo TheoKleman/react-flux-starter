@@ -15,3 +15,5 @@
 2. Then `npm start`
 3. Go to `http://localhost:8080`
 4. You're ready to go
+
+## How to compile all the assets for production ?

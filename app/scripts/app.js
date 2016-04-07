@@ -4,9 +4,9 @@ require("./../styles/master.scss");
 // Importing node modules
 import React from "react";
 import ReactDOM from "react-dom";
-import Hello from "./components/hello";
+import Todos from "./components/todos";
 
 ReactDOM.render(
-  <Hello name="World" />,
+  <Todos />,
   document.getElementById('app-container')
 );
