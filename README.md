@@ -12,7 +12,7 @@
 
 ## How to start ?
 1. First, run `npm install`
-2. Then `npm run dev`
+2. Then `npm run start`
 3. Go to `http://localhost:8080`
 4. You're ready to go
 
